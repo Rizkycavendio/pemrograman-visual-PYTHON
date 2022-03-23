@@ -1,4 +1,6 @@
 # Muhammad Rizky Cavendio - 20051397011
+# Kelas A
+
 
 class Segitiga:
     def __init__(self, alas, tinggi):
