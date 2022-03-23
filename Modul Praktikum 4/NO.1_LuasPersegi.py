@@ -1,4 +1,6 @@
 # Muhammad Rizky Cavendio - 20051397011
+# Kelas A
+
 
 class Persegi:
     def __init__(self, sisi):
