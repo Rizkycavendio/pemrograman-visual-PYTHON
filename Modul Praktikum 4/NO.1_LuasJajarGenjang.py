@@ -1,4 +1,5 @@
 # Muhammad Rizky Cavendio - 20051397011
+# Kelas A
 
 class jajarGenjang:
     def __init__(self, alas, tinggi):
