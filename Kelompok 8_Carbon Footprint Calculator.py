@@ -7,51 +7,51 @@ import tkinter.font
 
 root = Tk() #root disini menampung librarynya sekaligus sebagai main window dari aplikasinya
 root.title("APLIKASI CARBON FOOTPRINT") #untuk title dari aplikasinya
-root.config(bg="gray17") #configurasi warna backgorund
+root.config(bg="white") #configurasi warna backgorund
 root.geometry("400x600") #ukuran aplikasinya 400x500 px
 
 #WARNA
-color={"nero": "#252726", "hijau": "#3f9940",
-       "darkorange": "#FE6106"}
+color={"ivory": "#FFFFFF", "pistachio": "#228B22",
+       "lightgrey": "#DCDCDC"}
 
 #MENGATUR FONT
 thefont = tkinter.font.Font(size=15)
 
 #MEMBUAT NAV ATAS
-topFrame = Frame(root, bg=color["hijau"]) #membuat frame di root dengan value background color hijau
+topFrame = Frame(root, bg=color["pistachio"]) #membuat frame di root dengan value background color hijau
 topFrame.pack(side="top", fill=X) #mengatur posisi dari framenya
 
 # MEMBUAT HEADER
 #Membuat Label di dalam topFrame -> Label(topFrame, value...) dengan value text, font, background (bg), warna font (fg), height dan padding sumbu x.
-homeLabel = Label(topFrame, text="Carbon Footprint", font="Bahnschrift 15", bg=color["hijau"], fg="gray17", height=2, padx=20)
+homeLabel = Label(topFrame, text="Carbon Footprint", font="Bahnschrift 15", bg=color["pistachio"], fg="white", height=2, padx=20)
 homeLabel.pack(side="right") #mengatur posisi dari framenya mau di mana dengan pack(side"...")
 
 
 #MEMBUAT TULISAN UTAMA
 #Membuat tulisan dengan Label di dalam root -> Label(root, value...) lihat di bawah ini.  Dengan value-nya text, font, background (bg), warna font (fg).
-brandLabel = Label(root, text="Welcome to Carbon Footprint!", font="System 20", bg="gray17", fg="green")
+brandLabel = Label(root, text="Welcome to Carbon Footprint!", font="System 20", bg=color["ivory"], fg="black")
 brandLabel.place(x=5, y=100)  #mengatur posisi dari labelnya dengan place(x=.., y=..)
 
 #yg di bawah ini sama dengan yang di atas, hanya saja ini untuk membuat tulsan kedua di bawahnya
-brandLabel2 = Label(root, text="Silahkan masukkan angkanya: ", font="Bahnschrift 12", bg="gray17", fg="green")
+brandLabel2 = Label(root, text="Silahkan masukkan angkanya: ", font="Bahnschrift 12", bg=color["ivory"], fg="black")
 brandLabel2.place(x=10, y=170) #mengatur posisi dari labelnya dengan place(x=.., y=..)
 
 
 # MEMBUAT KOTAK FRAME BARU UNTUK TEMPAT KALKULATORNYA
 # dengan menggunakan LabelFrame(root, value...), untuk valuenya berisi text, background(bg), warna font(fg), dan padding x, y.
-newFrame = LabelFrame(root, text="Penghitung Emisi Karbon",  bg="gray17", fg="white", padx= 10 ,pady=10)
+newFrame = LabelFrame(root, text="Penghitung Emisi Karbon",  bg="limegreen", fg="black", padx= 10 ,pady=10)
 newFrame.place(x=15, y=220) #mengatur posisi dari labelFrame-nya dengan place(x=.., y=..)
 
 
 # MEMBUAT JUDUL DAN "=" SAMADENGAN
-judul = Label(newFrame, text="Carbon Kendaraan",bg="gray17", fg="white").grid(row=0, columnspan=3) #MEMBUAT TULISAN JUDUL KE-1
-samde = Label(newFrame, text="=", bg="gray17", fg="white").grid(row=1, column=1) #MEMBUAT TANDA "=" KE-1
+judul = Label(newFrame, text="Carbon Kendaraan",bg="limegreen", fg="black").grid(row=0, columnspan=3) #MEMBUAT TULISAN JUDUL KE-1
+samde = Label(newFrame, text="=", bg="limegreen", fg="black").grid(row=1, column=1) #MEMBUAT TANDA "=" KE-1
 
-judul2 = Label(newFrame, text="Carbon Makanan", bg="gray17", fg="white").grid(row=3, columnspan=3) #MEMBUAT TULISAN JUDUL KE-2
-samde2 = Label(newFrame, text="=", bg="gray17", fg="white").grid(row=4, column=1) #MEMBUAT TANDA "=" KE-2
+judul2 = Label(newFrame, text="Carbon Makanan", bg="limegreen", fg="black").grid(row=3, columnspan=3) #MEMBUAT TULISAN JUDUL KE-2
+samde2 = Label(newFrame, text="=", bg="limegreen", fg="black").grid(row=4, column=1) #MEMBUAT TANDA "=" KE-2
 
-judul3 = Label(newFrame, text="Carbon Elektronik", bg="gray17", fg="white").grid(row=6, columnspan=3) #MEMBUAT TULISAN JUDUL KE-3
-samde3 = Label(newFrame, text="=", bg="gray17", fg="white").grid(row=7, column=1) #MEMBUAT TANDA "=" KE-3
+judul3 = Label(newFrame, text="Carbon Elektronik", bg="limegreen", fg="black").grid(row=6, columnspan=3) #MEMBUAT TULISAN JUDUL KE-3
+samde3 = Label(newFrame, text="=", bg="limegreen", fg="black").grid(row=7, column=1) #MEMBUAT TANDA "=" KE-3
 
 
 #MEMBUAT KOTAK INPUT ANGKA BARIS 1
@@ -178,13 +178,13 @@ drop3.grid(row=8, column=0)
 
 
 #Tombol hitung
-btn = Button(newFrame, text="Count", bg=color['darkorange'], command=lambda: rumusKendaraan) #Tombol hitung kendaraan
+btn = Button(newFrame, text="Count", bg=color['lightgrey'], command=lambda: rumusKendaraan) #Tombol hitung kendaraan
 btn.grid(row=2, column=2) #mengatur posisi gridnya
 
-btn2 = Button(newFrame, text="Count", bg=color['darkorange'], command=lambda: rumusMakanan)  #Tombol hitung makanan
+btn2 = Button(newFrame, text="Count", bg=color['lightgrey'], command=lambda: rumusMakanan)  #Tombol hitung makanan
 btn2.grid(row=5, column=2) #mengatur posisi gridnya
 
-btn3 = Button(newFrame, text="Count", bg=color['darkorange'], command=lambda: rumusElektronik)   #Tombol hitung elektronik
+btn3 = Button(newFrame, text="Count", bg=color['lightgrey'], command=lambda: rumusElektronik)   #Tombol hitung elektronik
 btn3.grid(row=8, column=2) #mengatur posisi gridnya
 
 
